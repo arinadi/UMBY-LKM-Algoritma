@@ -1,0 +1,26 @@
+<input type='number' placeholder='panjang sisi 1 (AB)' id='sisi1'><br>
+<input type='number' placeholder='panjang sisi 2 (BC)' id='sisi2'><br>
+<input type='number' placeholder='panjang sisi 3 (CD)' id='sisi3'><br>
+<input type='number' placeholder='panjang sisi 4 (DA)' id='sisi4'><br>
+<button id='hitung'>
+    Keliling Trapesium
+</button>
+
+<script>
+document.getElementById("hitung").addEventListener("click", hitung, false);
+
+
+function hitung() {
+	sisi1 = parseFloat(document.getElementById("sisi1").value);
+    sisi2 = parseFloat(document.getElementById("sisi2").value);
+    sisi3 = parseFloat(document.getElementById("sisi3").value);
+    sisi4 = parseFloat(document.getElementById("sisi4").value);
+    kel = kel_trapesium(sisi1, sisi2, sisi3, sisi4);
+    alert('keliling trapesium : '+ kel);
+}
+
+function kel_trapesium(sisi1, sisi2, sisi3, sisi4){
+keliling = sisi1+sisi2+sisi3+sisi4;
+return keliling;
+}
+</script>
