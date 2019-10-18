@@ -1,0 +1,24 @@
+<input type='number' placeholder='Masukan Nilai' id='nilai'><br>
+<button id='cek'>
+    Cek Nilai
+</button>
+<script>
+document.getElementById("cek").addEventListener("click", cek_nilai, false);
+
+function cek_nilai() {
+    nilai = parseFloat(document.getElementById("nilai").value);
+    if (nilai >= 85) {
+        status = "A";
+    } else if (nilai >= 70) {
+        status = "B";
+    } else if (nilai >= 55) {
+        status = "C";
+    } else if (nilai >= 40) {
+        status = "D";
+    } else {
+        status = "E";
+    }
+
+    alert("Nilai anda " + status)
+}
+</script>

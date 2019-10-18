@@ -1,0 +1,66 @@
+<input type='text' placeholder='Masukan NAMA' id='nama'><br>
+<input type='text' placeholder='Masukan Alamat' id='alamat'><br>
+<input type='text' placeholder='Masukan Bagian' id='bagian'><br>
+<input type='number' placeholder='Masukan Gaji' id='gaji'><br>
+<button id='simpan'>
+    Simpan
+</button>
+<h1>
+    Data Karyawan 
+</h1>
+<p id="keterangan"></p>
+<div id="data-karyawan">
+
+</div>
+
+<script>
+document.getElementById("simpan").addEventListener("click", simpan_data, false);
+
+data_karyawan = [];
+
+function simpan_data() {
+    nama = document.getElementById("nama").value;
+    alamat = document.getElementById("alamat").value;
+    bagian = document.getElementById("bagian").value;
+    gaji = parseFloat(document.getElementById("gaji").value);
+    data_karyawan.push({
+        "nama": nama,
+        "alamat": alamat,
+        "bagian": bagian,
+        "gaji": gaji,
+    });
+    reset_form();
+    tampilkan_data();
+}
+
+function reset_form() {
+    document.getElementById("nama").value = '';
+    document.getElementById("alamat").value = '';
+    document.getElementById("bagian").value = '';
+    document.getElementById("gaji").value = '';
+}
+
+function tampilkan_data(max = 5) {
+    console.log(data_karyawan);
+    total_data = data_karyawan.length;
+    if (total_data < max) {
+        max = total_data
+    }
+    i = 0
+    html = "";
+    for (var data of data_karyawan) {
+    	if (i === max) { break; }
+    	html += "Nama : "+ data.nama;
+        html += "<br>";
+        html += "Alamat : "+ data.alamat;
+        html += "<br>";
+        html += "Bagian : "+ data.bagian;
+        html += "<br>";
+        html += "Gaji : "+ data.gaji;
+        html += "<hr>";
+        i++;
+    }
+    document.getElementById("data-karyawan").innerHTML = html;
+        document.getElementById("keterangan").innerHTML = "menampilkan "+max+" dari total data "+total_data;
+}
+</script>

@@ -1,0 +1,25 @@
+<input type='text' placeholder='Masukan NIM' id='nim'><br>
+<input type='text' placeholder='Masukan NAMA' id='nama'><br>
+<input type='number' placeholder='Masukan NILAI' id='nilai'><br>
+<button id='validasi'>
+    Validasi
+</button>
+
+<script>
+document.getElementById("validasi").addEventListener("click", validasi_nilai, false);
+
+function validasi_nilai() {
+    nim = document.getElementById("nim").value;
+    nama = document.getElementById("nama").value;
+    nilai = parseFloat(document.getElementById("nilai").value);
+    if (nilai >= 75) {
+        ucapan = "Selamat";
+        status = "LULUS";
+    } else {
+        ucapan = "Maaf";
+        status = "GAGAL !";
+    }
+    alert(ucapan + " " + nama + ", NIM" + nim + ", dinyatakan " + status)
+}
+
+</script>

@@ -1,0 +1,26 @@
+<input type='number' placeholder='Masukan Bilangan' id='bilangan'><br>
+<button id='cek'>
+    Cek Bilangan
+</button>
+
+<script>
+document.getElementById("cek").addEventListener("click", cek_bilangan, false);
+
+function cek_bilangan() {
+    bilangan = parseFloat(document.getElementById("bilangan").value);
+    if (isGenap(bilangan)) {
+        status = "GENAP";
+    } else {
+        status = "GANJIL";
+    }
+    alert("Bilangan " + bilangan + " adalah bilangan " + status)
+}
+
+function isGenap(angka) {
+    if (angka % 2 == 0) {
+    	return true;
+    } else {
+    	return false;
+    }
+}
+</script>
