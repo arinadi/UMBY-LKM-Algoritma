@@ -1,37 +1,37 @@
 <script>
-a = JSON.parse('["merah","hijau","kuning","kuning","merah","kuning","hijau"]');
-jumlah_a = a.length;
+    a = JSON.parse('["merah","hijau","kuning","kuning","merah","kuning","hijau"]');
+    jumlah_a = a.length;
 
-b = JSON.parse('{"jumlah":0, "warna":""}');
-c = JSON.parse('{"jumlah":0, "warna":""}');
-d = JSON.parse('{"jumlah":0, "warna":""}');
+    b = JSON.parse('{"jumlah":0, "warna":""}');
+    c = JSON.parse('{"jumlah":0, "warna":""}');
+    d = JSON.parse('{"jumlah":0, "warna":""}');
 
-i = 0; //0 diamsumsikan pengambilan 1
+    i = 0; //0 diamsumsikan pengambilan 1
 
-console.log("jumlah A:" + jumlah_a);
+    console.log("jumlah A:" + jumlah_a);
 
-do {
-    console.log("pengambilan ke:" + i);
-    console.log("warna bola A:" + a[i]);
-    if (b.jumlah == 0 || b.warna == a[i]) {
-        b.jumlah += 1;
-        b.warna = a[i];
-        console.log("bola " + b.warna + " dimasukan ke kotak B:");
-    } else if (c.jumlah == 0 || c.warna == a[i]) {
-        c.jumlah += 1;
-        c.warna = a[i];
-        console.log("bola " + c.warna + " dimasukan ke kotak C:");
-    } else {
-        d.jumlah += 1;
-        d.warna = a[i];
-        console.log("bola " + d.warna + " dimasukan ke kotak D:");
-    }
-    jumlah_a--;
-    console.log("sisa A:" + jumlah_a);
-    i++;
-} while (jumlah_a != 0)
-console.log("Saat ini");
-console.log(b.warna + " di kotak B berjumlah " + b.jumlah + "");
-console.log(c.warna + " di kotak C berjumlah " + c.jumlah + "");
-console.log(d.warna + " di kotak D berjumlah " + d.jumlah + "");
+    do {
+        console.log("pengambilan ke:" + i);
+        console.log("warna bola A:" + a[i]);
+        if (b.jumlah == 0 || b.warna == a[i]) {
+            b.jumlah += 1;
+            b.warna = a[i];
+            console.log("bola " + b.warna + " dimasukan ke kotak B:");
+        } else if (c.jumlah == 0 || c.warna == a[i]) {
+            c.jumlah += 1;
+            c.warna = a[i];
+            console.log("bola " + c.warna + " dimasukan ke kotak C:");
+        } else {
+            d.jumlah += 1;
+            d.warna = a[i];
+            console.log("bola " + d.warna + " dimasukan ke kotak D:");
+        }
+        jumlah_a--;
+        console.log("sisa A:" + jumlah_a);
+        i++;
+    } while (jumlah_a != 0)
+    console.log("Saat ini");
+    console.log(b.warna + " di kotak B berjumlah " + b.jumlah + "");
+    console.log(c.warna + " di kotak C berjumlah " + c.jumlah + "");
+    console.log(d.warna + " di kotak D berjumlah " + d.jumlah + "");
 </script>

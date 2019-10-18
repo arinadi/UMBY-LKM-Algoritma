@@ -3,23 +3,23 @@
     Penjumlahan Deret
 </button>
 <script>
-document.getElementById("hitung").addEventListener("click", menjumlahkan_deret, false);
+    document.getElementById("hitung").addEventListener("click", menjumlahkan_deret, false);
 
-function menjumlahkan_deret() {
-    n = parseFloat(document.getElementById("bilangan").value);
-    if (n > 0 && n % 1 == 0) {
-        i = 1;
-        total = 0;
-        status = "";
-        do {
-            total += i;
-            status += "+" + i;
-            i++;
-        } while (i <= n)
-    } else {
-        alert("Maaf bilangan tidak valid!")
-        return;
+    function menjumlahkan_deret() {
+        n = parseFloat(document.getElementById("bilangan").value);
+        if (n > 0 && n % 1 == 0) {
+            i = 1;
+            total = 0;
+            status = "";
+            do {
+                total += i;
+                status += "+" + i;
+                i++;
+            } while (i <= n)
+        } else {
+            alert("Maaf bilangan tidak valid!")
+            return;
+        }
+        alert("Hasil dari penjumlahan deret " + status + " = " + total)
     }
-    alert("Hasil dari penjumlahan deret " + status + " = " + total)
-}
 </script>

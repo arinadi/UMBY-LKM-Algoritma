@@ -1,20 +1,20 @@
 <input type='number' placeholder='Masukan r' id='r'>
 <button id='hitung'>
-Hitung Luas Lingkaran
+    Hitung Luas Lingkaran
 </button>
 <script>
-document.getElementById("hitung").addEventListener("click", hitung, false);
+    document.getElementById("hitung").addEventListener("click", hitung, false);
 
-function hitung() {
-    r = parseFloat(document.getElementById("r").value);
-    if (r % 7 == 0) {
-        pi = parseFloat(22 / 7);
-        pi_string = "22/7";
-    } else {
-        pi = parseFloat(3.14);
-        pi_string = "3.14";
+    function hitung() {
+        r = parseFloat(document.getElementById("r").value);
+        if (r % 7 == 0) {
+            pi = parseFloat(22 / 7);
+            pi_string = "22/7";
+        } else {
+            pi = parseFloat(3.14);
+            pi_string = "3.14";
+        }
+        l = pi * (r * r);
+        alert("r " + r + ", pi " + pi_string + ", Luas Lingkarang : " + l)
     }
-    l = pi * (r * r);
-    alert("r " + r + ", pi " + pi_string + ", Luas Lingkarang : " + l)
-}
 </script>

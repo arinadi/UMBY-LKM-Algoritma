@@ -3,27 +3,27 @@
     Cek Nilai
 </button>
 <script>
-document.getElementById("cek").addEventListener("click", cek_nilai, false);
+    document.getElementById("cek").addEventListener("click", cek_nilai, false);
 
-function cek_nilai() {
-    nilai = parseFloat(document.getElementById("nilai").value);
-    switch (true) {
-        case nilai >= 85:
-            status = "A";
-            break;
-                    case nilai >= 70:
-            status = "B";
-            break;
-                    case nilai >= 55:
-            status = "C";
-            break;
-                    case nilai >= 40:
-            status = "D";
-            break;
-        default:
-            status = "E";
+    function cek_nilai() {
+        nilai = parseFloat(document.getElementById("nilai").value);
+        switch (true) {
+            case nilai >= 85:
+                status = "A";
+                break;
+            case nilai >= 70:
+                status = "B";
+                break;
+            case nilai >= 55:
+                status = "C";
+                break;
+            case nilai >= 40:
+                status = "D";
+                break;
+            default:
+                status = "E";
+        }
+
+        alert("Nilai anda " + status)
     }
-
-    alert("Nilai anda " + status)
-}
 </script>

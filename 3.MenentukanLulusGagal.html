@@ -6,20 +6,19 @@
 </button>
 
 <script>
-document.getElementById("validasi").addEventListener("click", validasi_nilai, false);
+    document.getElementById("validasi").addEventListener("click", validasi_nilai, false);
 
-function validasi_nilai() {
-    nim = document.getElementById("nim").value;
-    nama = document.getElementById("nama").value;
-    nilai = parseFloat(document.getElementById("nilai").value);
-    if (nilai >= 75) {
-        ucapan = "Selamat";
-        status = "LULUS";
-    } else {
-        ucapan = "Maaf";
-        status = "GAGAL !";
+    function validasi_nilai() {
+        nim = document.getElementById("nim").value;
+        nama = document.getElementById("nama").value;
+        nilai = parseFloat(document.getElementById("nilai").value);
+        if (nilai >= 75) {
+            ucapan = "Selamat";
+            status = "LULUS";
+        } else {
+            ucapan = "Maaf";
+            status = "GAGAL !";
+        }
+        alert(ucapan + " " + nama + ", NIM" + nim + ", dinyatakan " + status)
     }
-    alert(ucapan + " " + nama + ", NIM" + nim + ", dinyatakan " + status)
-}
-
 </script>

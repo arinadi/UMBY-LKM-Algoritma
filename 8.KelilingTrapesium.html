@@ -7,20 +7,20 @@
 </button>
 
 <script>
-document.getElementById("hitung").addEventListener("click", hitung, false);
+    document.getElementById("hitung").addEventListener("click", hitung, false);
 
 
-function hitung() {
-	sisi1 = parseFloat(document.getElementById("sisi1").value);
-    sisi2 = parseFloat(document.getElementById("sisi2").value);
-    sisi3 = parseFloat(document.getElementById("sisi3").value);
-    sisi4 = parseFloat(document.getElementById("sisi4").value);
-    kel = kel_trapesium(sisi1, sisi2, sisi3, sisi4);
-    alert('keliling trapesium : '+ kel);
-}
+    function hitung() {
+        sisi1 = parseFloat(document.getElementById("sisi1").value);
+        sisi2 = parseFloat(document.getElementById("sisi2").value);
+        sisi3 = parseFloat(document.getElementById("sisi3").value);
+        sisi4 = parseFloat(document.getElementById("sisi4").value);
+        kel = kel_trapesium(sisi1, sisi2, sisi3, sisi4);
+        alert('keliling trapesium : ' + kel);
+    }
 
-function kel_trapesium(sisi1, sisi2, sisi3, sisi4){
-keliling = sisi1+sisi2+sisi3+sisi4;
-return keliling;
-}
+    function kel_trapesium(sisi1, sisi2, sisi3, sisi4) {
+        keliling = sisi1 + sisi2 + sisi3 + sisi4;
+        return keliling;
+    }
 </script>
