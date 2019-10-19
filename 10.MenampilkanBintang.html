@@ -1,0 +1,26 @@
+<input type='number' placeholder='Masukan Angka' id='bintang'><br>
+<button id='bentuk'>
+    Bentuk barisan bintang
+</button>
+<h1>
+    Barisan Bintang
+</h1>
+<div id="layar-bintang">
+
+</div>
+
+<script>
+    document.getElementById("bentuk").addEventListener("click", bentuk_baris, false);
+
+    function bentuk_baris() {
+        bintang = parseFloat(document.getElementById("bintang").value);
+        html = "";
+        for (i1=bintang; i1>0; i1--) {
+            for (i2=0; i2<i1; i2++) {
+                html += "*";
+            }
+            html += "<br>";
+        }
+        document.getElementById("layar-bintang").innerHTML = html;
+    }
+</script>
